@@ -8,13 +8,9 @@ dotenv.config();
 const app = express();
 const PORT = 8000;
 
-app.use(
-  cors({
-    origin: "https://ecommerceseproject.vercel.app", // specify the frontend's URL
-    methods: ["GET", "POST", "PUT", "DELETE"], // allow necessary methods
-    credentials: true, // if you’re using cookies or other credentials
-  })
-);
+app.use(cors({
+  origin: 'https://ecommerceseproject.vercel.app' // Allow only this origin
+}));
 app.use(express.json());
 app.use("/api", userRoutes);
 app.get("/", (req, res) => {
