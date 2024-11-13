@@ -60,7 +60,7 @@ const Login = () => {
         });
       } else if (credentials.email && credentials.password) {
         const sendAuth = await axios.post(
-          `http://localhost:8000/api/sign-in`,
+          `https://se-ecommerce-backend-omega.vercel.app/api/sign-in`,
           {
             email: credentials.email,
             password: credentials.password,

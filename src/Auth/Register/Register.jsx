@@ -92,7 +92,7 @@ const Register = () => {
         credentials.password
       ) {
         const sendAuth = await axios.post(
-          `http://localhost:8000/api/register`,
+          `https://se-ecommerce-backend-omega.vercel.app/api/register`,
           {
             firstName: credentials.firstName,
             lastName: credentials.lastName,
